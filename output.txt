@@ -1,0 +1,218 @@
+Started by GitHub push by Praj0496
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/Jenkins-Sonar-Docker project
+The recommended git tool is: NONE
+using credential git_key
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Jenkins-Sonar-Docker project/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Praj0496/sonar-docker-project.git # timeout=10
+Fetching upstream changes from https://github.com/Praj0496/sonar-docker-project.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials Git exam repo credentials
+ > git fetch --tags --force --progress -- https://github.com/Praj0496/sonar-docker-project.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 05193ca4911b677a6d5c2bf03f3e66a59c2979ea (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 05193ca4911b677a6d5c2bf03f3e66a59c2979ea # timeout=10
+Commit message: "Initial commit"
+ > git rev-list --no-walk d55b4f2a9bb7c876c3ba52b56e1dfd481d33a40b # timeout=10
+[Jenkins-Sonar-Docker project] $ /var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/Project_code_scanner/bin/sonar-scanner -Dsonar.host.url=http://35.239.78.165:9000 ******** -Dsonar.projectKey=CI-CD-project "-Dsonar.projectBaseDir=/var/lib/jenkins/workspace/Jenkins-Sonar-Docker project"
+07:06:46.492 INFO  Scanner configuration file: /var/lib/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/Project_code_scanner/conf/sonar-scanner.properties
+07:06:46.497 INFO  Project root configuration file: NONE
+07:06:46.532 INFO  SonarScanner CLI 6.1.0.4477
+07:06:46.536 INFO  Java 17.0.11 Ubuntu (64-bit)
+07:06:46.538 INFO  Linux 6.5.0-1023-gcp amd64
+07:06:46.596 INFO  User cache: /var/lib/jenkins/.sonar/cache
+07:06:47.802 INFO  JRE provisioning: os[linux], arch[x86_64]
+07:06:47.970 INFO  Communicating with SonarQube Server 10.6.0.92116
+07:06:48.476 INFO  Starting SonarScanner Engine...
+07:06:48.478 INFO  Java 17.0.11 Eclipse Adoptium (64-bit)
+07:06:50.059 INFO  Load global settings
+07:06:50.245 INFO  Load global settings (done) | time=186ms
+07:06:50.251 INFO  Server id: 147B411E-AZBeiUo6C3PZXxBY2Bs2
+07:06:50.268 INFO  Loading required plugins
+07:06:50.269 INFO  Load plugins index
+07:06:50.287 INFO  Load plugins index (done) | time=20ms
+07:06:50.288 INFO  Load/download plugins
+07:06:50.373 INFO  Load/download plugins (done) | time=86ms
+07:06:50.949 INFO  Process project properties
+07:06:50.951 INFO  Process project properties (done) | time=1ms
+07:06:50.970 INFO  Project key: CI-CD-project
+07:06:50.971 INFO  Base dir: /var/lib/jenkins/workspace/Jenkins-Sonar-Docker project
+07:06:50.972 INFO  Working dir: /var/lib/jenkins/workspace/Jenkins-Sonar-Docker project/.scannerwork
+07:06:50.992 INFO  Load project settings for component key: 'CI-CD-project'
+07:06:51.035 INFO  Load project settings for component key: 'CI-CD-project' (done) | time=43ms
+07:06:51.101 INFO  Load quality profiles
+07:06:51.198 INFO  Load quality profiles (done) | time=97ms
+07:06:51.221 INFO  Auto-configuring with CI 'Jenkins'
+07:06:51.275 INFO  Load active rules
+07:07:03.380 INFO  Load active rules (done) | time=12106ms
+07:07:03.392 INFO  Load analysis cache
+07:07:03.413 INFO  Load analysis cache | time=21ms
+07:07:03.562 INFO  Preprocessing files...
+07:07:03.851 INFO  4 languages detected in 65 preprocessed files
+07:07:03.852 INFO  0 files ignored because of scm ignore settings
+07:07:03.861 INFO  Loading plugins for detected languages
+07:07:03.863 INFO  Load/download plugins
+07:07:03.873 INFO  Load/download plugins (done) | time=10ms
+07:07:04.161 INFO  Load project repositories
+07:07:04.183 INFO  Load project repositories (done) | time=22ms
+07:07:04.212 INFO  Indexing files...
+07:07:04.218 INFO  Project configuration:
+07:07:04.447 INFO  57 files indexed
+07:07:04.450 INFO  Quality profile for css: Sonar way
+07:07:04.452 INFO  Quality profile for docker: Sonar way
+07:07:04.454 INFO  Quality profile for js: Sonar way
+07:07:04.454 INFO  Quality profile for web: Sonar way
+07:07:04.455 INFO  ------------- Run sensors on module CI-CD-project
+07:07:04.541 INFO  Load metrics repository
+07:07:04.599 INFO  Load metrics repository (done) | time=58ms
+07:07:05.778 INFO  Sensor HTML [web]
+07:07:06.489 INFO  Sensor HTML [web] (done) | time=711ms
+07:07:06.490 INFO  Sensor JaCoCo XML Report Importer [jacoco]
+07:07:06.493 INFO  'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+07:07:06.495 INFO  No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+07:07:06.496 INFO  Sensor JaCoCo XML Report Importer [jacoco] (done) | time=5ms
+07:07:06.496 INFO  Sensor Java Config Sensor [iac]
+07:07:06.516 INFO  0 source files to be analyzed
+07:07:06.539 INFO  0/0 source files have been analyzed
+07:07:06.540 INFO  Sensor Java Config Sensor [iac] (done) | time=43ms
+07:07:06.541 INFO  Sensor JavaScript/TypeScript analysis [javascript]
+07:07:09.613 INFO  Detected os: Linux arch: amd64 alpine: false. Platform: LINUX_X64
+07:07:09.634 INFO  Using embedded Node.js runtime
+07:07:09.635 INFO  Using Node.js executable: '/var/lib/jenkins/.sonar/js/node-runtime/node'.
+07:07:13.238 INFO  Memory configuration: OS (3903 MB), Node.js (2000 MB).
+07:07:16.676 INFO  Found 0 tsconfig.json file(s): []
+07:07:16.709 INFO  Creating TypeScript program
+07:07:16.710 INFO  TypeScript configuration file /tmp/tmp-3871-xqOlG0b6vIJP
+07:07:16.710 INFO  2 source files to be analyzed
+07:07:17.614 INFO  Starting analysis with current program
+07:07:19.649 INFO  Analyzed 2 file(s) with current program
+07:07:19.656 INFO  2/2 source files have been analyzed
+07:07:19.657 INFO  Hit the cache for 0 out of 2
+07:07:19.661 INFO  Miss the cache for 2 out of 2: ANALYSIS_MODE_INELIGIBLE [2/2]
+07:07:19.661 INFO  Sensor JavaScript/TypeScript analysis [javascript] (done) | time=13121ms
+07:07:19.662 INFO  Sensor JavaScript inside HTML analysis [javascript]
+07:07:19.686 INFO  1 source file to be analyzed
+07:07:19.802 INFO  1/1 source file has been analyzed
+07:07:19.803 INFO  Hit the cache for 0 out of 1
+07:07:19.804 INFO  Miss the cache for 1 out of 1: ANALYSIS_MODE_INELIGIBLE [1/1]
+07:07:19.804 INFO  Sensor JavaScript inside HTML analysis [javascript] (done) | time=141ms
+07:07:19.805 INFO  Sensor CSS Rules [javascript]
+07:07:19.836 INFO  9 source files to be analyzed
+07:07:20.263 WARN  Failed to parse file file:///var/lib/jenkins/workspace/Jenkins-Sonar-Docker%20project/assets/css/style.css, line 951, Unclosed comment
+07:07:20.795 INFO  9/9 source files have been analyzed
+07:07:20.796 INFO  Hit the cache for 0 out of 0
+07:07:20.802 INFO  Miss the cache for 0 out of 0
+07:07:20.802 INFO  Sensor CSS Rules [javascript] (done) | time=994ms
+07:07:20.802 INFO  Sensor CSS Metrics [javascript]
+07:07:21.167 INFO  Sensor CSS Metrics [javascript] (done) | time=369ms
+07:07:21.167 INFO  Sensor IaC Docker Sensor [iac]
+07:07:21.178 INFO  1 source file to be analyzed
+07:07:21.406 INFO  1/1 source file has been analyzed
+07:07:21.407 INFO  Sensor IaC Docker Sensor [iac] (done) | time=240ms
+07:07:21.408 INFO  Sensor TextAndSecretsSensor [text]
+07:07:21.408 INFO  Available processors: 2
+07:07:21.409 INFO  Using 2 threads for analysis.
+07:07:22.148 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test" or "tests"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+07:07:22.185 INFO  Using git CLI to retrieve untracked files
+07:07:22.502 INFO  Analyzing language associated files and files included via "sonar.text.inclusions" that are tracked by git
+07:07:22.540 INFO  12 source files to be analyzed
+07:07:23.027 INFO  12/12 source files have been analyzed
+07:07:23.032 INFO  Sensor TextAndSecretsSensor [text] (done) | time=1621ms
+07:07:23.036 INFO  ------------- Run sensors on project
+07:07:23.072 INFO  Sensor Zero Coverage Sensor
+07:07:23.084 INFO  Sensor Zero Coverage Sensor (done) | time=11ms
+07:07:23.114 INFO  CPD Executor Calculating CPD for 3 files
+07:07:23.158 INFO  CPD Executor CPD calculation finished (done) | time=42ms
+07:07:23.164 INFO  SCM revision ID '05193ca4911b677a6d5c2bf03f3e66a59c2979ea'
+07:07:23.346 INFO  Analysis report generated in 172ms, dir size=606.7 kB
+07:07:23.423 INFO  Analysis report compressed in 76ms, zip size=137.4 kB
+07:07:23.485 INFO  Analysis report uploaded in 61ms
+07:07:23.492 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://35.239.78.165:9000/dashboard?id=CI-CD-project
+07:07:23.493 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+07:07:23.493 INFO  More about the report processing at http://35.239.78.165:9000/api/ce/task?id=5ca9100f-990b-4062-b0bb-09ee484b105c
+07:07:24.677 INFO  Analysis total time: 34.208 s
+07:07:24.679 INFO  SonarScanner Engine completed successfully
+07:07:25.018 INFO  EXECUTION SUCCESS
+07:07:25.019 INFO  Total time: 38.531s
+[Jenkins-Sonar-Docker project] $ /bin/sh -xe /tmp/jenkins10900693409166479189.sh
++ scp -r Dockerfile README.md assets index.html readme.txt ubuntu@34.16.10.24:/home/ubuntu/website
++ ssh ubuntu@34.16.10.24 
+echo "SSH connection successful"
+cd /home/ubuntu/website
+docker build -t praj_website_image .
+docker container run -itd --name praj-website -p 8080:80 praj_website_image
+
+SSH connection successful
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 133B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/nginx:latest
+#2 DONE 0.7s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM docker.io/library/nginx:latest@sha256:9c367186df9a6b18c6735357b8eb7f407347e84aea09beb184961cb83543d46e
+#4 resolve docker.io/library/nginx:latest@sha256:9c367186df9a6b18c6735357b8eb7f407347e84aea09beb184961cb83543d46e 0.0s done
+#4 ...
+
+#5 [internal] load build context
+#5 transferring context: 3.65MB 0.1s done
+#5 DONE 0.1s
+
+#4 [1/2] FROM docker.io/library/nginx:latest@sha256:9c367186df9a6b18c6735357b8eb7f407347e84aea09beb184961cb83543d46e
+#4 sha256:4e02e85a6f060a8406978fa53aafd2d828d0cedf5259275d191bab9afc33249e 2.29kB / 2.29kB done
+#4 sha256:e0c9858e10ed8be697dc2809db78c57357ffc82de88c69a3dee5d148354679ef 7.32kB / 7.32kB done
+#4 sha256:2cc3ae149d28a36d28d4eefbae70aaa14a0c9eab588c3790f7979f310b893c44 0B / 29.15MB 0.1s
+#4 sha256:9c367186df9a6b18c6735357b8eb7f407347e84aea09beb184961cb83543d46e 10.27kB / 10.27kB done
+#4 sha256:1018f2b8dba8ffec0afc981d5bae673e38ecac6ca29a861d12cccbd820d53f8d 0B / 41.84MB 0.1s
+#4 sha256:b831e78d8e20641c11c527baff6e2c7bae6a43cc1ab4316a5532885d6461b1e7 0B / 628B 0.1s
+#4 sha256:2cc3ae149d28a36d28d4eefbae70aaa14a0c9eab588c3790f7979f310b893c44 19.12MB / 29.15MB 0.3s
+#4 sha256:1018f2b8dba8ffec0afc981d5bae673e38ecac6ca29a861d12cccbd820d53f8d 6.29MB / 41.84MB 0.3s
+#4 sha256:b831e78d8e20641c11c527baff6e2c7bae6a43cc1ab4316a5532885d6461b1e7 628B / 628B 0.2s done
+#4 sha256:3ab22521e91957c19caeb12eadcad2823fdca853477acb38cd5e9a1ebe57e96e 959B / 959B 0.3s
+#4 sha256:2cc3ae149d28a36d28d4eefbae70aaa14a0c9eab588c3790f7979f310b893c44 29.15MB / 29.15MB 0.5s
+#4 sha256:1018f2b8dba8ffec0afc981d5bae673e38ecac6ca29a861d12cccbd820d53f8d 26.21MB / 41.84MB 0.5s
+#4 sha256:3ab22521e91957c19caeb12eadcad2823fdca853477acb38cd5e9a1ebe57e96e 959B / 959B 0.3s done
+#4 sha256:5112bf42775bbb6a896ccd3ad63cbf864976fb1c047a4c56f316cf78d3edd756 397B / 397B 0.4s done
+#4 sha256:cbdaf9e4ee2d8507bf2e162c560cfb0b37567db3870235b8940aeb157d628327 1.21kB / 1.21kB 0.5s
+#4 sha256:2cc3ae149d28a36d28d4eefbae70aaa14a0c9eab588c3790f7979f310b893c44 29.15MB / 29.15MB 0.6s done
+#4 sha256:1018f2b8dba8ffec0afc981d5bae673e38ecac6ca29a861d12cccbd820d53f8d 41.84MB / 41.84MB 0.7s
+#4 sha256:cbdaf9e4ee2d8507bf2e162c560cfb0b37567db3870235b8940aeb157d628327 1.21kB / 1.21kB 0.7s done
+#4 extracting sha256:2cc3ae149d28a36d28d4eefbae70aaa14a0c9eab588c3790f7979f310b893c44
+#4 sha256:1018f2b8dba8ffec0afc981d5bae673e38ecac6ca29a861d12cccbd820d53f8d 41.84MB / 41.84MB 0.9s done
+#4 sha256:a06b6fd631e8e2091ce18db1a1b063f14f06a63d0513cafc51500ce7cb1ae2f4 1.40kB / 1.40kB 1.0s done
+#4 extracting sha256:2cc3ae149d28a36d28d4eefbae70aaa14a0c9eab588c3790f7979f310b893c44 2.3s done
+#4 extracting sha256:1018f2b8dba8ffec0afc981d5bae673e38ecac6ca29a861d12cccbd820d53f8d
+#4 extracting sha256:1018f2b8dba8ffec0afc981d5bae673e38ecac6ca29a861d12cccbd820d53f8d 1.9s done
+#4 extracting sha256:b831e78d8e20641c11c527baff6e2c7bae6a43cc1ab4316a5532885d6461b1e7 done
+#4 extracting sha256:3ab22521e91957c19caeb12eadcad2823fdca853477acb38cd5e9a1ebe57e96e
+#4 extracting sha256:3ab22521e91957c19caeb12eadcad2823fdca853477acb38cd5e9a1ebe57e96e done
+#4 extracting sha256:5112bf42775bbb6a896ccd3ad63cbf864976fb1c047a4c56f316cf78d3edd756 done
+#4 extracting sha256:cbdaf9e4ee2d8507bf2e162c560cfb0b37567db3870235b8940aeb157d628327 done
+#4 extracting sha256:a06b6fd631e8e2091ce18db1a1b063f14f06a63d0513cafc51500ce7cb1ae2f4
+#4 extracting sha256:a06b6fd631e8e2091ce18db1a1b063f14f06a63d0513cafc51500ce7cb1ae2f4 done
+#4 DONE 5.6s
+
+#6 [2/2] COPY . /usr/share/nginx/html/
+#6 DONE 1.5s
+
+#7 exporting to image
+#7 exporting layers 0.1s done
+#7 writing image sha256:da379aaf266e3082dfdeb9abe6a3b34f38bf31fe34df4132917973c36d6d9e53 done
+#7 naming to docker.io/library/praj_website_image done
+#7 DONE 0.1s
+5f9fabbcbb6440f0e4bb8ce27a62025f94e356d4aa3ce65a9c8a3b16c8dee58e
+Finished: SUCCESS
